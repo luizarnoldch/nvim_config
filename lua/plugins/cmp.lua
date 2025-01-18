@@ -6,8 +6,14 @@ return {
 		"hrsh7th/cmp-path",
 		"saadparwaiz1/cmp_luasnip",
 		"L3MON4D3/LuaSnip",
+
+		-- React snippet
+		"mlaursen/vim-react-snippets",
 	},
 	config = function()
+		-- React snippet
+		require("vim-react-snippets").lazy_load()
+
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
 

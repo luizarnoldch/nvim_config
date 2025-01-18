@@ -21,5 +21,6 @@
   "tailwind-tools": { "branch": "master", "commit": "3703e162d819a04b128902c508276553dae0dfb8" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "ts-worksheet-neovim": { "branch": "main", "commit": "965913502fd6a443f9067c7e85c2042877aaddf9" },
+  "vim-react-snippets": { "branch": "main", "commit": "2a845ec02b2eb9db79acf0329c70a682682a27b6" },
   "vscode-go": { "branch": "master", "commit": "f10960f690883d2c089624e01b2f3f8aeb7566fd" }
 }
