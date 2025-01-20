@@ -5,6 +5,10 @@ return {
 		local formatter_lua = require("formatter.filetypes.lua")
 		local formatter_util = require("formatter.util")
 
+		local shiftwidth = vim.o.shiftwidth or 2
+		local tabstop = vim.o.tabstop or 2
+		local expandtab = vim.o.expandtab and "--expand-tab" or "--no-expand-tab"
+
 		formatter.setup({
 			logging = false,
 			log_level = vim.log.levels.WARN,
@@ -24,6 +28,9 @@ return {
 								formatter_util.escape_path(formatter_util.get_current_buffer_file_path()),
 								"--",
 								"-",
+								"--indentt-width",
+								tostring(shiftwidth),
+								expandtab,
 							},
 							stdin = true,
 						}
@@ -36,6 +43,10 @@ return {
 							args = {
 								"--stdin-filepath",
 								formatter_util.escape_path(formatter_util.get_current_buffer_file_path()),
+								"--tab-width",
+								tostring(tabstop),
+								"--use-tabs",
+								not expandtab,
 							},
 							stdin = true,
 						}
@@ -48,6 +59,10 @@ return {
 							args = {
 								"--stdin-filepath",
 								formatter_util.escape_path(formatter_util.get_current_buffer_file_path()),
+								"--tab-width",
+								tostring(tabstop),
+								"--use-tabs",
+								not expandtab,
 							},
 							stdin = true,
 						}
@@ -60,6 +75,10 @@ return {
 							args = {
 								"--stdin-filepath",
 								formatter_util.escape_path(formatter_util.get_current_buffer_file_path()),
+								"--tab-width",
+								tostring(tabstop),
+								"--use-tabs",
+								not expandtab,
 							},
 							stdin = true,
 						}
@@ -72,6 +91,10 @@ return {
 							args = {
 								"--stdin-filepath",
 								formatter_util.escape_path(formatter_util.get_current_buffer_file_path()),
+								"--tab-width",
+								tostring(tabstop),
+								"--use-tabs",
+								not expandtab,
 							},
 							stdin = true,
 						}
