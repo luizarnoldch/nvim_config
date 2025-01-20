@@ -12,9 +12,9 @@ return {
         "jsx",
         "xml",
       },
-      did_setup = {},
-      setup = {},
-      get_opts = {},
+      did_setup = null,
+      setup = null,
+      get_opts = null,
     })
   end,
 }
