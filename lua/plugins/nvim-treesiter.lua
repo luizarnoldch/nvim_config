@@ -26,6 +26,7 @@ return {
 				"yaml",
 				"php",
 				"tsx",
+				"typescript",
 				"html",
 				"css",
 				"lua",
@@ -39,6 +40,12 @@ return {
 				additional_vim_regex_highlighting = false,
 			},
 			ignore_install = {},
+			incremental_selection = {
+				enable = true,
+			},
+			textobjects = {
+				enable = true,
+			},
 			modules = {},
 		})
 	end,
