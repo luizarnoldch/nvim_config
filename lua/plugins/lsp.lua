@@ -148,5 +148,21 @@ return {
         ) or vim.fs.dirname(vim.fs.find(".git", { path = fname, upward = true })[1])
       end,
     })
+
+    -- Configuration for SQL
+    lspconfig.sqlls.setup({
+      cmd = { "sql-language-server", "up", "--method", "stdio" },
+      filetypes = { "sql", "mysql" },
+      root_dir = util.root_pattern(".sqllsrc.json"),
+      settings = {},
+    })
+
+    -- Configuration for Docker Compose
+    lspconfig.docker_compose_language_service.setup({
+      cmd = { "docker-compose-langserver", "--stdio" },
+      filetypes = { "yaml.docker-compose" },
+      root_dir = util.root_pattern("docker-compose.yaml", "docker-compose.yml", "compose.yaml", "compose.yml"),
+      single_file_support = true,
+    })
   end,
 }

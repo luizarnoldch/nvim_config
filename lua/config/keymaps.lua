@@ -14,6 +14,11 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 -- Jumplist
 --keymap.set("n", "<C-m>", "<C-i>", opts)
 
+-- Navigation
+-- -- Move Lines top and down
+keymap.set("n", "<A-j>", ":m .-2<CR>==", opts)
+keymap.set("n", "<A-k>", ":m .+1<CR>==", opts)
+
 -- Leader Commands | Used
 -- a               |
 -- b               |
@@ -58,3 +63,6 @@ keymap.set("n", "<C-j>", ":resize -1<CR>", opts)
 keymap.set("n", "<C-k>", ":resize +1<CR>", opts)
 keymap.set("n", "<C-h>", ":vertical resize -1<CR>", opts)
 keymap.set("n", "<C-l>", ":vertical resize +1<CR>", opts)
+
+-- Sidebar Config
+keymap.set("n", "<leader>e", ":Neotree toggle<CR>", opts)
