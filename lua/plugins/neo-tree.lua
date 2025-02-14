@@ -9,6 +9,19 @@ return {
   },
   config = function()
     local neo_tree = require("neo-tree")
-    neo_tree.setup({})
+    neo_tree.setup({
+      window = { position = "right" },
+      filesystem = {
+        filtered_items = {
+          hide_gitignored = false,
+          always_show = {
+            ".gitignore",
+          },
+          always_show_by_pattern = {
+            ".env*",
+          },
+        },
+      },
+    })
   end,
 }
